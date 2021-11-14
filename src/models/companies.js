@@ -11,11 +11,11 @@ const companiesSchema = new mongoose.Schema({
   description: {
       type: String,
       minlength: 15,
-      maxlength: 150,
+      maxlength: 300,
       required: true,
       trim: true
   },
-  avatar: {
+  logo_url: {
       type: String,
   },
   email: {
@@ -23,14 +23,17 @@ const companiesSchema = new mongoose.Schema({
     required: true,
     match: /.*@.*\..*/,
   },
-  website: {
+  url: {
       type: String,
       required: true,
   },
-  crunchbase: {
+  crunchbase_url: {
       type: String,
   },
-  linkedin: {
+  linkedin_url: {
+      type: String,
+  },
+  twitter_url: {
       type: String,
   },
 }, {timestamps: true})
